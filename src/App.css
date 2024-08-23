@@ -1,0 +1,213 @@
+/* Base styles for both themes */
+.App {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header and Footer styles */
+.app-header, .app-footer {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Lora', serif; /* Updated font style */
+}
+
+.app-footer {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.app-footer a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.app-footer a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Add styling for the logo */
+.app-logo {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar styles */
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar label {
+  margin-right: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Product Table styles */
+.product-table {
+  width: 80%; /* Reduced table width */
+  margin: 0 auto 30px auto; /* Center-align table */
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--table-background);
+}
+
+.product-table th, .product-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-table td {
+  background-color: var(--table-cell-background);
+  color: var(--text-color);
+}
+
+.product-table tr:nth-child(even) td {
+  background-color: var(--row-even-background);
+}
+
+.product-table tr:hover {
+  background-color: var(--row-hover-background);
+}
+
+/* Total Revenue styles */
+.total-revenue {
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: right;
+  color: var(--total-revenue-color);
+}
+
+/* Light Theme */
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-color: #ced4da;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --row-even-background: #f8f9fa;
+  --row-hover-background: #e2e6ea;
+  --table-background: #ffffff;
+  --table-cell-background: #ffffff;
+  --total-revenue-color: #007bff;
+}
+
+.light-theme .theme-toggle-button {
+  background-color: #f8f9fa;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #1d72b8;
+  --secondary-color: #a1a1a1;
+  --border-color: #333333;
+  --link-color: #1d72b8;
+  --link-hover-color: #004a75;
+  --row-even-background: #1f1f1f;
+  --row-hover-background: #2c2c2c;
+  --table-background: #1e1e1e;
+  --table-cell-background: #2a2a2a;
+  --total-revenue-color: #1d72b8;
+}
+
+.dark-theme .theme-toggle-button {
+  background-color: #333333;
+}
+
+/* Button Styles */
+.theme-toggle-button {
+  border: none;
+  padding: 12px;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the logo link is only clickable around the logo */
+.logo-link {
+  display: inline-block; /* Keeps the link only around the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-logo {
+  max-width: 200px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-link:hover .app-logo {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}

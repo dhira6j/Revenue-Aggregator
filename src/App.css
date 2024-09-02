@@ -59,7 +59,6 @@
   transform: scale(1.1);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 /* Search Bar styles */
 .search-bar {
   margin-bottom: 30px;
@@ -74,10 +73,17 @@
   color: var(--primary-color);
 }
 
-.search-bar input {
+.input-container {
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 400px;
-  padding: 12px 20px;
+  position: relative; /* Make sure positioning is relative for internal absolute positioning */
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 50px 12px 20px; /* Added extra padding for the button */
   border-radius: 30px;
   border: 1px solid var(--border-color);
   font-size: 1rem;
@@ -90,6 +96,19 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   outline: none;
 }
+
+#voice-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 10px; /* Adjust to position the button inside the input */
+  font-size: 29px;
+  opacity: 2.7; /* Adjusted opacity for better visibility */
+}
+
+
 
 /* Product Table styles */
 .product-table {
